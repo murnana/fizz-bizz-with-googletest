@@ -14,6 +14,9 @@ project(fizz-bizz-with-googletest CXX)
 # Google Test Libs
 add_subdirectory(${PROJECT_SOURCE_DIR}/lib/googletest)
 
+include(GoogleTest)
+enable_testing()
+
 ###############################################################################
 # Sources
 ###############################################################################
@@ -35,5 +38,6 @@ target_link_libraries(${PROJECT_TEST_EXEC_NAME} PRIVATE
     gtest_main
     ${PROJECT_SRC_LIB_NAME}
 )
-include(GoogleTest)
-gtest_add_tests(TARGET ${PROJECT_TEST_EXEC_NAME})
+gtest_add_tests(TARGET ${PROJECT_TEST_EXEC_NAME}
+    SOURCES${PROJECT_TEST_SRCS}
+)
