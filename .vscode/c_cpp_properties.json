@@ -1,0 +1,21 @@
+{
+    "configurations": [
+        {
+            "name": "Mac",
+            "includePath": [
+                "${workspaceFolder}/src/**",
+                "${workspaceFolder}/lib/googletest/googletest/include/**",
+                "${workspaceFolder}/lib/googletest/googlemock/include/**",
+                "${workspaceFolder}/test/**"
+            ],
+            "defines": [],
+            "macFrameworkPath": [
+                "/Library/Developer/CommandLineTools/SDKs/MacOSX10.14.sdk/System/Library/Frameworks"
+            ],
+            "compilerPath": "/usr/bin/clang",
+            "cppStandard": "c++14",
+            "cStandard": "c11"
+        }
+    ],
+    "version": 4
+}
