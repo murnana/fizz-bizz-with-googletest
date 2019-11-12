@@ -1,10 +1,15 @@
 #include "./fizz_bizz.hpp"
 #include <gtest/gtest.h>
 
-TEST(FizzBizzTest, Simple) {
+/**
+ * @brief 1. シンプルなテスト
+ * TDD最初のステップです。まずはこれをクリアしましょう。
+ * 
+ */
+TEST(FizzBizzTest, FirstStep) {
     fizz_bizz tester;
-    ASSERT_EQ("1", tester.answer(1));
-    ASSERT_EQ("Fizz", tester.answer(3));
-    ASSERT_EQ("Buzz", tester.answer(5));
-    ASSERT_EQ("FizzBuzz", tester.answer(15));
+    EXPECT_EQ("1", tester.answer(1));
+    EXPECT_EQ("Fizz", tester.answer(3));
+    EXPECT_EQ("Buzz", tester.answer(5));
+    EXPECT_EQ("FizzBuzz", tester.answer(15));
 }
