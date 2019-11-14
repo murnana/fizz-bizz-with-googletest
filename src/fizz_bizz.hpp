@@ -23,19 +23,19 @@ public:
      */
     template <typename T>
     const std::string answer(const T &input) const {
+        // 3でも5でも割り切れる時、「FizzBizz」と答える
+        if ((input % 15) == 0) {
+            return "FizzBuzz";
+        }
+
         // 3で割り切れる時、「Fizz」と答える
-        if (input == 3) {
+        if ((input % 3) == 0) {
             return "Fizz";
         }
 
         // 5で割り切れる時、「Buzz」と答える
-        if (input == 5) {
+        if ((input % 5) == 0) {
             return "Buzz";
-        }
-
-        // 3でも5でも割り切れる時、「FizzBizz」と答える
-        if (input == 15) {
-            return "FizzBuzz";
         }
 
         // それ以外の時は文字列にして答える
